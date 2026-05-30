@@ -1,0 +1,44 @@
+#!/bin/bash
+
+echo "============================="
+echo "       PI SYSTEM INFO        "
+echo "============================="
+echo ""
+
+# CPU Temperature
+temp=$(vcgencmd measure_temp 2>/dev/null | cut -d= -f2)
+echo "CPU Temp:     ${temp:-N/A}"
+
+# CPU Usage
+cpu=$(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')
+echo "CPU Usage:    ${cpu}%"
+
+# RAM
+ram=$(free -h | awk '/^Mem:/ {print $3 " / " $2}')
+echo "RAM Usage:    $ram"
+
+# Disk
+disk=$(df -h / | awk 'NR==2 {print $3 " / " $2 " ("$5" used)"}')
+echo "Disk Usage:   $disk"
+
+# Uptime
+uptime_str=$(uptime -p)
+echo "Uptime:       $uptime_str"
+
+# Local IP
+ip=$(hostname -I | awk '{print $1}')
+echo "Local IP:     $ip"
+
+# Public IP
+pub_ip=$(curl -s ifconfig.me)
+echo "Public IP:    $pub_ip"
+
+# Hostname
+echo "Hostname:     $(hostname)"
+
+# OS
+os=$(cat /etc/os-release | grep PRETTY_NAME | cut -d= -f2 | tr -d '"')
+echo "OS:           $os"
+
+echo ""
+echo "============================="
