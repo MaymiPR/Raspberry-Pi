@@ -16,8 +16,8 @@ TOOLS=(
     "Pi%20Updater.sh"
     "Pi%20System%20Info.sh"
     "Pi%20Cleaner.sh"
-    "PI%20Docker%20Status.sh"
-    "PI%20Docker%20Cleanup.sh"
+    "Pi%20Docker%20Status.sh"
+    "Pi%20Docker%20Cleanup.sh"
     "Pi%20Docker%20Restart.sh"
     "Pi%20Port%20Scanner.sh"
 )
