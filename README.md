@@ -12,3 +12,13 @@ Run in terminal:
 ```bash
 curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi/refs/heads/main/Pi%20System%20Info | bash
 ```
+
+**Pi Cleaner:** It cleans up unused packages, cache, old logs, and temp files to free up disk space.
+```bash
+curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi/refs/heads/main/Pi%20Cleaner.sh | bash
+```
+
+**Pi Docker Status:** It shows all running and stopped Docker containers along with installed images.
+```bash
+curl -s  | bash
+```
