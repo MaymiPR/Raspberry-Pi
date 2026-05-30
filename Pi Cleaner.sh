@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "============================="
-echo "       PI SYSTEM CLEANER     "
+echo "         PI CLEANER          "
 echo "============================="
 echo ""
 
