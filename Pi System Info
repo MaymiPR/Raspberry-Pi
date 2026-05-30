@@ -25,9 +25,13 @@ echo "Disk Usage:   $disk"
 uptime_str=$(uptime -p)
 echo "Uptime:       $uptime_str"
 
-# Local IP
-ip=$(hostname -I | awk '{print $1}')
-echo "Local IP:     $ip"
+# LAN (Ethernet)
+lan=$(ip addr show eth0 2>/dev/null | grep "inet " | awk '{print $2}' | cut -d/ -f1)
+echo "LAN IP:       ${lan:-Not connected}"
+
+# WLAN (WiFi)
+wlan=$(ip addr show wlan0 2>/dev/null | grep "inet " | awk '{print $2}' | cut -d/ -f1)
+echo "WLAN IP:      ${wlan:-Not connected}"
 
 # Public IP
 pub_ip=$(curl -s ifconfig.me)
