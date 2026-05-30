@@ -20,5 +20,5 @@ curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi/refs/heads/main/P
 
 **Pi Docker Status:** It shows all running and stopped Docker containers along with installed images.
 ```bash
-curl -s  | bash
+curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi/refs/heads/main/Pi%20Docker%20Status.sh | bash
 ```
