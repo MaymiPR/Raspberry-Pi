@@ -13,13 +13,13 @@ INSTALL_DIR="$HOME/Documents/Raspberry Pi Tools"
 BASE_URL="https://raw.githubusercontent.com/$GITHUB_USER/$GITHUB_REPO/$BRANCH"
 
 TOOLS=(
-    "update.sh"
-    "sysinfo.sh"
-    "cleaner.sh"
-    "docker-status.sh"
-    "docker-cleanup.sh"
-    "docker-restart.sh"
-    "port-scanner.sh"
+    "Pi Updater.sh"
+    "Pi System Info.sh"
+    "Pi Cleaner.sh"
+    "PI Docker Status.sh"
+    "PI Docker Cleanup.sh"
+    "Pi Docker Restart.sh"
+    "Pi Port Scanner.sh"
 )
 
 # Create folder if it doesn't exist
