@@ -8,18 +8,18 @@ echo ""
 # Config
 GITHUB_USER="MaymiPR"
 GITHUB_REPO="Raspberry-Pi-Tools"
-BRANCH="main"
+BRANCH="refs/heads/main"
 INSTALL_DIR="$HOME/Documents/Raspberry Pi Tools"
 BASE_URL="https://raw.githubusercontent.com/$GITHUB_USER/$GITHUB_REPO/$BRANCH"
 
 TOOLS=(
-    "Pi Updater.sh"
-    "Pi System Info.sh"
-    "Pi Cleaner.sh"
-    "PI Docker Status.sh"
-    "PI Docker Cleanup.sh"
-    "Pi Docker Restart.sh"
-    "Pi Port Scanner.sh"
+    "Pi%20Updater.sh"
+    "Pi%20System%20Info.sh"
+    "Pi%20Cleaner.sh"
+    "PI%20Docker%20Status.sh"
+    "PI%20Docker%20Cleanup.sh"
+    "Pi%20Docker%20Restart.sh"
+    "Pi%20Port%20Scanner.sh"
 )
 
 # Create folder if it doesn't exist
@@ -32,15 +32,16 @@ SUCCESS=0
 FAILED=0
 
 for tool in "${TOOLS[@]}"; do
-    echo -n "Downloading $tool... "
-    HTTP_CODE=$(curl -s -o "$INSTALL_DIR/$tool" -w "%{http_code}" "$BASE_URL/$tool")
+    clean_name=$(echo "$tool" | sed 's/%20/ /g')
+    echo -n "Downloading $clean_name... "
+    HTTP_CODE=$(curl -s -o "$INSTALL_DIR/$clean_name" -w "%{http_code}" "$BASE_URL/$tool")
     if [ "$HTTP_CODE" = "200" ]; then
-        chmod +x "$INSTALL_DIR/$tool"
+        chmod +x "$INSTALL_DIR/$clean_name"
         echo "OK"
         ((SUCCESS++))
     else
         echo "FAILED (HTTP $HTTP_CODE)"
-        rm -f "$INSTALL_DIR/$tool"
+        rm -f "$INSTALL_DIR/$clean_name"
         ((FAILED++))
     fi
 done
