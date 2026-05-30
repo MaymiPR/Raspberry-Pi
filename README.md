@@ -13,6 +13,11 @@ Run in terminal:
 curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi-Tools/refs/heads/main/Pi%20System%20Info.sh | bash
 ```
 
+**Pi Port Scanner:** Shows all open ports with protocol, service name, process, and connection state.
+```bash
+curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi-Tools/refs/heads/main/Pi%20Port%20Scanner.sh | bash
+```
+
 **Pi Cleaner:** It cleans up unused packages, cache, old logs, and temp files to free up disk space.
 ```bash
 curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi-Tools/refs/heads/main/Pi%20Cleaner.sh | bash
@@ -22,3 +27,13 @@ curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi-Tools/refs/heads/
 ```bash
 curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi-Tools/refs/heads/main/Pi%20Docker%20Status.sh | bash
 ```
+**Pi Docker Cleanup:** Removes stopped containers, unused images, and volumes to free up disk space.
+```bash
+curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi-Tools/refs/heads/main/Pi%20Docker%20Status.sh | bash
+```
+
+**Pi Docker Restart:** Lists your containers and lets you pick one to restart.
+```bash
+curl -s https://raw.githubusercontent.com/MaymiPR/Raspberry-Pi-Tools/refs/heads/main/Pi%20Docker%20Status.sh | bash
+```
+
